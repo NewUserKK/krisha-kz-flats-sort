@@ -131,7 +131,7 @@ def main():
         jsdata = templates.JSDATA.format(FLAT_IDS=flatIds)
         out.write(templates.TEMPLATE.format(FLAT_LIST=flatList, JSDATA=jsdata))
 
-    webbrowser.open(f"file://{os.path.realpath('out/index.html')}")
+    webbrowser.open(f"file://{os.path.realpath('index.html')}")
 
 
 main()
