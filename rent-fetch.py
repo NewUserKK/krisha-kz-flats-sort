@@ -4,6 +4,7 @@ import bs4
 import json
 import webbrowser
 import os
+import sys
 import requests
 import re
 
@@ -122,6 +123,11 @@ def scrapAllFlats() -> PageScrapResults:
 
 
 def main():
+    args = sys.argv
+    if (len(args) > 1):
+        global REQUEST_URL
+        REQUEST_URL = args[1]
+
     scrappedFlats = scrapAllFlats()
 
     with open("index.html", "w") as out:
