@@ -6,7 +6,7 @@
 0. `python -m pip install beautifulsoup4`
 1. Указать в скрипте REQUEST_URL
     - это обычный URL страницы поиска с нужными фильтрами и городом
-    - пример: `https://krisha.kz/arenda/kvartiry/nur-sultan/?das[_sys.hasphoto]=1&das[price][to]=10000&das[rent.period]=1`
+    - пример: `https://krisha.kz/arenda/kvartiry/nur-sultan/?das[_sys.hasphoto]=1&das[price][to]=10000&das[rent.period]=1` ([тык](https://krisha.kz/arenda/kvartiry/nur-sultan/?das[_sys.hasphoto]=1&das[price][to]=10000&das[rent.period]=1))
 2. Изменить как надо параметры PAGE_START и PAGE_END
     - если брать много (> 4) страниц, то перестают отображаться счётчики просмотров (но список всё равно будет отсортирован)
     - PAGE_START начинается с 1
