@@ -21,7 +21,7 @@ import templates
 # You can request separately in batches, otherwise views counter would not show
 # (but flats still will be sorted)
 PAGE_START = 1
-PAGE_END = 1
+PAGE_END = 4
 
 REQUEST_URL = "https://krisha.kz/arenda/kvartiry/nur-sultan/?das[_sys.hasphoto]=1&das[price][to]=10000&das[rent.period]=1"
 ####################
@@ -117,9 +117,9 @@ def scrapAllFlats() -> PageScrapResults:
         allIds += ids
 
     results = PageScrapResults(flats=allFlats, ids=allIds)
-    filtered = sortFlatsByViews(results)
+    sortedFlats = sortFlatsByViews(results)
 
-    return filtered
+    return sortedFlats
 
 
 def main():
